@@ -500,7 +500,8 @@ class FewShotDataset(torch.utils.data.Dataset):
                     break
         
             assert len(selection) > 0
-        
+        if args.debug_mode:
+            print(selection)
         return selection
 
     def __len__(self):
